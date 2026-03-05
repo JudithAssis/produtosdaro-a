@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://produtosdaroça.shop/sitemap.xml

@@ -1,503 +1,1248 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iogurte Caseiro e Queijos em Mantena MG - Produtos da Roça</title>
-  <meta name="description"
-    content="Laticínio artesanal em Mantena MG. Iogurte caseiro e queijo artesanal 100% naturais. Entrega no mesmo dia. Peça agora mesmo pelo WhatsApp!" />
-  <meta name="keywords"
-    content="laticínio artesanal Mantena, iogurte caseiro Mantena, queijo artesanal Mantena MG, queijo frescal, mussarela artesanal, produtos da roça" />
-  <meta name="author" content="Produtos da Roça" />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://produtosdaroça.shop/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iogurte Caseiro e Queijos em Mantena MG - Produtos da Roça</title>
+    <meta name="description"
+        content="Laticínio artesanal em Mantena MG. Iogurte caseiro e queijo artesanal 100% naturais. Entrega no mesmo dia. Peça agora mesmo pelo WhatsApp!">
+    <meta name="keywords"
+        content="laticínio artesanal Mantena, iogurte caseiro Mantena, queijo artesanal Mantena MG, queijo frescal, mussarela artesanal, produtos da roça" />
+    <meta name="author" content="Produtos da Roça" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://produtosdaroça.shop/" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Iogurte Caseiro e Queijos em Mantena MG - Produtos da Roça" />
-  <meta property="og:description"
-    content="Laticínio artesanal em Mantena MG. Iogurte caseiro e queijo artesanal 100% naturais. Entrega no mesmo dia. Peça agora mesmo pelo WhatsApp!" />
-  <meta property="og:image" content="https://produtosdaroça.shop/assets/img/hero-bg.png" />
-  <meta property="og:url" content="https://produtosdaroça.shop/" />
-  <meta property="og:locale" content="pt_BR" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Iogurte Caseiro e Queijos em Mantena MG - Produtos da Roça" />
+    <meta property="og:description"
+        content="Laticínio artesanal em Mantena MG. Iogurte caseiro e queijo artesanal 100% naturais. Entrega no mesmo dia. Peça agora mesmo pelo WhatsApp!" />
+    <meta property="og:image" content="https://produtosdaroça.shop/assets/img/hero-bg.png" />
+    <meta property="og:url" content="https://produtosdaroça.shop/" />
+    <meta property="og:locale" content="pt_BR" />
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Iogurte Caseiro e Queijos em Mantena MG - Produtos da Roça" />
-  <meta name="twitter:description"
-    content="Laticínio artesanal em Mantena MG. Iogurte caseiro e queijo artesanal 100% naturais. Entrega no mesmo dia. Peça agora mesmo pelo WhatsApp!" />
-  <meta name="twitter:image" content="https://produtosdaroça.shop/assets/img/hero-bg.png" />
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Iogurte Caseiro e Queijos em Mantena MG - Produtos da Roça" />
+    <meta name="twitter:description"
+        content="Laticínio artesanal em Mantena MG. Iogurte caseiro e queijo artesanal 100% naturais. Entrega no mesmo dia. Peça agora mesmo pelo WhatsApp!" />
+    <meta name="twitter:image" content="https://produtosdaroça.shop/assets/img/hero-bg.png" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- Schema.org JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://produtosdaroça.shop/#organization",
-        "name": "Produtos da Roça",
-        "url": "https://produtosdaroça.shop/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://produtosdaroça.shop/assets/img/logo.png"
-        }
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://produtosdaroça.shop/#localbusiness",
-        "name": "Produtos da Roça",
-        "image": "https://produtosdaroça.shop/assets/img/products.png",
-        "url": "https://produtosdaroça.shop/",
-        "telephone": "+5533988659819",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Mantena",
-          "addressRegion": "MG",
-          "addressCountry": "BR"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "-18.7786",
-          "longitude": "-40.9907"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "08:00",
-          "closes": "17:00"
-        },
-        "priceRange": "$$",
-        "hasMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60257.49252939513!2d-40.9907!3d-18.7786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb5f6e6a4b8a8a7%3A0x9b2e3d4c5a6b7c8d!2sMantena%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1709000000000",
-        "areaServed": {
-          "@type": "City",
-          "name": "Mantena"
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://produtosdaroça.shop/#website",
-        "url": "https://produtosdaroça.shop/",
-        "name": "Produtos da Roça",
-        "publisher": {
-          "@id": "https://produtosdaroça.shop/#organization"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://produtosdaroça.shop/#service-iogurte",
-        "name": "Iogurte Caseiro",
-        "description": "Iogurte natural feito de forma artesanal, disponível em 6 sabores: morango, ameixa, abacaxi, coco e mais.",
-        "provider": {
-          "@id": "https://produtosdaroça.shop/#organization"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Mantena"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://produtosdaroça.shop/#service-frescal",
-        "name": "Queijo Frescal",
-        "description": "Queijo frescal artesanal, produzido com leite selecionado e o cuidado da tradição mineira.",
-        "provider": {
-          "@id": "https://produtosdaroça.shop/#organization"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Mantena"
-        }
-      },
-      {
-        "@type": "Service",
-        "@id": "https://produtosdaroça.shop/#service-mussarela",
-        "name": "Queijo Mussarela",
-        "description": "Mussarela artesanal de alta qualidade, perfeita para o dia a dia da sua família.",
-        "provider": {
-          "@id": "https://produtosdaroça.shop/#organization"
-        },
-        "areaServed": {
-          "@type": "City",
-          "name": "Mantena"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://produtosdaroça.shop/#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Início",
-            "item": "https://produtosdaroça.shop/"
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://produtosdaroça.shop/#organization",
+          "name": "Produtos da Roça",
+          "url": "https://produtosdaroça.shop/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://produtosdaroça.shop/assets/img/logo.png"
           }
-        ]
-      }
-    ]
-  }
-  </script>
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://produtosdaroça.shop/#localbusiness",
+          "name": "Produtos da Roça",
+          "image": "https://produtosdaroça.shop/assets/img/products.png",
+          "url": "https://produtosdaroça.shop/",
+          "telephone": "+5533988659819",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Mantena",
+            "addressRegion": "MG",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-18.7786",
+            "longitude": "-40.9907"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          "priceRange": "$$",
+          "hasMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60257.49252939513!2d-40.9907!3d-18.7786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb5f6e6a4b8a8a7%3A0x9b2e3d4c5a6b7c8d!2sMantena%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1709000000000",
+          "areaServed": {
+            "@type": "City",
+            "name": "Mantena"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://produtosdaroça.shop/#website",
+          "url": "https://produtosdaroça.shop/",
+          "name": "Produtos da Roça",
+          "publisher": {
+            "@id": "https://produtosdaroça.shop/#organization"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://produtosdaroça.shop/#service-iogurte",
+          "name": "Iogurte Caseiro",
+          "description": "Iogurte natural feito de forma artesanal, disponível em 6 sabores: morango, ameixa, abacaxi, coco e mais.",
+          "provider": {
+            "@id": "https://produtosdaroça.shop/#organization"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Mantena"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://produtosdaroça.shop/#service-frescal",
+          "name": "Queijo Frescal",
+          "description": "Queijo frescal artesanal, produzido com leite selecionado e o cuidado da tradição mineira.",
+          "provider": {
+            "@id": "https://produtosdaroça.shop/#organization"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Mantena"
+          }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://produtosdaroça.shop/#service-mussarela",
+          "name": "Queijo Mussarela",
+          "description": "Mussarela artesanal de alta qualidade, perfeita para o dia a dia da sua família.",
+          "provider": {
+            "@id": "https://produtosdaroça.shop/#organization"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Mantena"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://produtosdaroça.shop/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Início",
+              "item": "https://produtosdaroça.shop/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2D6A4F',
+                        secondary: '#D4A373',
+                        accent: '#E76F51',
+                        fundo: '#FEFAE0',
+                        texto: '#1B1B1B',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-fundo text-texto font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
 
-  <!-- ===================== HEADER ===================== -->
-  <header class="header" id="header">
-    <div class="container header__inner">
-      <a href="#inicio" class="header__logo">
-        <img src="assets/img/logo.png"
-          alt="Logo Produtos da Roça - Laticínio artesanal de iogurtes e queijos em Mantena MG" width="60"
-          height="60" />
-      </a>
-      <nav class="header__nav" id="nav">
-        <ul class="header__menu">
-          <li><a href="#inicio" class="header__link">Início</a></li>
-          <li><a href="#sobre" class="header__link">Sobre</a></li>
-          <li><a href="#produtos" class="header__link">Produtos</a></li>
-          <li><a href="#diferenciais" class="header__link">Diferenciais</a></li>
-          <li><a href="#depoimentos" class="header__link">Depoimentos</a></li>
-          <li><a href="#contato" class="header__link">Contato</a></li>
-        </ul>
-      </nav>
-      <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20ro%C3%A7a."
-        class="btn btn--whatsapp header__cta" target="_blank" rel="noopener" id="header-whatsapp-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-        Falar no WhatsApp
-      </a>
-      <button class="header__hamburger" id="hamburger" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </header>
+    <!-- Header / Nav -->
+    <header
+        class="fixed w-full top-0 z-50 bg-fundo/90 backdrop-blur-md border-b border-primary/10 transition-all duration-300"
+        x-data="{ mobileMenuOpen: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 20)">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <img src="assets/img/logo.png" alt="Produtos da Roça"
+                        class="w-12 h-12 rounded-full shadow-sm group-hover:scale-105 transition-transform">
+                    <span class="font-serif font-bold text-xl text-primary tracking-tight hidden sm:block">Produtos da
+                        Roça</span>
+                </a>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero" id="inicio">
-    <div class="hero__overlay"></div>
-    <div class="container hero__content">
-      <div class="hero__badge animate-on-scroll">🧀 Laticínio Artesanal em Mantena - MG</div>
-      <h1 class="hero__title animate-on-scroll">
-        Sabor caseiro direto<br />da <span class="highlight">roça</span> para sua mesa
-      </h1>
-      <p class="hero__subtitle animate-on-scroll">
-        Iogurtes naturais em 6 sabores e queijos artesanais feitos com carinho, tradição mineira e ingredientes
-        selecionados. Entrega no mesmo dia.
-      </p>
-      <div class="hero__actions animate-on-scroll">
-        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Quero%20encomendar%20produtos%20da%20ro%C3%A7a!"
-          class="btn btn--primary btn--lg" target="_blank" rel="noopener" id="hero-whatsapp-btn">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#hero"
+                        class="flex items-center gap-1.5 text-sm font-medium text-texto/80 hover:text-primary transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                            </path>
+                        </svg>
+                        Início
+                    </a>
+                    <a href="#sobre" class="text-sm font-medium text-texto/80 hover:text-primary transition-colors">Quem
+                        Somos</a>
+                    <a href="#servicos"
+                        class="text-sm font-medium text-texto/80 hover:text-primary transition-colors">Produtos</a>
+                    <a href="#beneficios"
+                        class="text-sm font-medium text-texto/80 hover:text-primary transition-colors">Benefícios</a>
+                    <a href="#faq"
+                        class="text-sm font-medium text-texto/80 hover:text-primary transition-colors">Dúvidas</a>
+                    <a href="#contato"
+                        class="text-sm font-medium text-texto/80 hover:text-primary transition-colors">Contato</a>
+
+                    <a href="https://wa.me/5533988659819" target="_blank" rel="noopener"
+                        class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-md shadow-primary/20 hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
+                        WhatsApp
+                    </a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-texto focus:outline-none"
+                    aria-label="Menu">
+                    <svg class="w-6 h-6" x-show="!mobileMenuOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg class="w-6 h-6" x-show="mobileMenuOpen" x-cloak fill="none" stroke="currentColor"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak x-transition.opacity
+            class="md:hidden absolute top-20 left-0 w-full bg-fundo border-b border-primary/10 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1 flex flex-col py-4">
+                <a @click="mobileMenuOpen = false" href="#hero"
+                    class="flex items-center gap-2 px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                        </path>
+                    </svg>
+                    Início
+                </a>
+                <a @click="mobileMenuOpen = false" href="#sobre"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">Quem
+                    Somos</a>
+                <a @click="mobileMenuOpen = false" href="#servicos"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">Produtos</a>
+                <a @click="mobileMenuOpen = false" href="#como-funciona"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">Como
+                    Funciona</a>
+                <a @click="mobileMenuOpen = false" href="#depoimentos"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">Depoimentos</a>
+                <a @click="mobileMenuOpen = false" href="#faq"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">Dúvidas</a>
+                <a @click="mobileMenuOpen = false" href="#contato"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-texto hover:bg-primary/5 hover:text-primary">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- 1. Hero Section -->
+        <section id="hero" class="relative min-h-[90vh] flex items-center pt-10 pb-20 lg:py-0 overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 w-full h-full">
+                <img src="assets/img/hero-bg.png" alt="Produtos Lácteos" class="object-cover w-full h-full"
+                    loading="lazy">
+                <div class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/30"></div>
+            </div>
+
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
+                <div class="max-w-3xl">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-secondary mb-6">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        <span class="text-sm font-medium tracking-wide">Produtos frescos produzidos diariamente.</span>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight mb-6">
+                        Laticínio Artesanal em Mantena MG: <br class="hidden lg:block" />
+                        <span class="text-secondary italic">Queijos e Iogurtes da Roça</span>
+                    </h1>
+
+                    <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed">
+                        Redescubra o verdadeiro sabor do campo com produtos 100% naturais, feitos com o carinho da
+                        tradição mineira. Entregamos o frescor da roça direto na sua mesa em Mantena e região.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5533988659819" target="_blank" rel="noopener"
+                            class="bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg shadow-accent/30 hover:shadow-xl hover:-translate-y-1 text-center flex justify-center items-center gap-2">
+                            Fazer Pedido pelo WhatsApp
+                        </a>
+                        <a href="#servicos"
+                            class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all text-center">
+                            Conhecer Nossos Produtos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Barra de Credibilidade -->
+        <section id="credibilidade"
+            class="bg-primary pb-12 pt-12 relative -mt-4 lg:-mt-8 z-20 mx-4 lg:mx-auto lg:max-w-6xl rounded-2xl shadow-xl shadow-primary/20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-secondary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Produção Diária</h3>
+                    <p class="text-white/70 text-sm">Leite selecionado e frescor garantido.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-secondary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">100% Natural</h3>
+                    <p class="text-white/70 text-sm">Sem conservantes ou corantes artificiais.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-secondary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Tradição Mineira</h3>
+                    <p class="text-white/70 text-sm">Receitas artesanais que passam de geração em geração.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-4 text-secondary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-white mb-2">Entrega Ágil</h3>
+                    <p class="text-white/70 text-sm">Receba em casa em Mantena com toda comodidade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Quem Somos -->
+        <section id="sobre" class="py-24 bg-fundo overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-secondary/20 rounded-[2rem] transform -rotate-3"></div>
+                        <img src="assets/img/products.png" alt="Produção Caseira"
+                            class="relative rounded-2xl shadow-2xl object-cover aspect-square" loading="lazy">
+
+                        <div
+                            class="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-xl max-w-xs hidden sm:block">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-primary/10 p-3 rounded-full text-primary">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-texto">Sabor Autêntico</p>
+                                    <p class="text-sm text-texto/60">Feito com muito carinho</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Nossa
+                            História</span>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-texto mb-6">Produtos da Roça: O Sabor
+                            da Nossa Terra em Mantena</h2>
+
+                        <div class="space-y-6 text-gray-600 text-lg leading-relaxed mb-8">
+                            <p>
+                                A Produtos da Roça nasceu do desejo de resgatar a essência da culinária mineira, levando
+                                para a mesa das famílias de Mantena um laticínio artesanal de pureza incomparável. O que
+                                começou como uma tradição familiar, hoje é referência para quem não abre mão de saúde e
+                                sabor.
+                            </p>
+                            <p>
+                                Nosso diferencial está no respeito ao tempo da natureza e na seleção rigorosa da nossa
+                                matéria-prima. Cada queijo e iogurte que sai da nossa produção carrega a identidade de
+                                Minas Gerais e o compromisso com um alimento vivo, nutritivo e livre de processos
+                                industriais agressivos.
+                            </p>
+                        </div>
+
+                        <a href="https://wa.me/5533988659819"
+                            class="inline-flex items-center gap-2 text-primary font-bold hover:text-primary/80 transition-colors group">
+                            Fale conosco e conheça nossa história
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Produtos -->
+        <section id="servicos" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Nossos
+                        Produtos</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-texto mb-6">Nossos Laticínios: O Melhor de
+                        Minas para Você</h2>
+                    <p class="text-gray-600">Experimente nossos produtos feitos artesanalmente, com o frescor e a
+                        qualidade que sua família merece.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-fundo rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                            🥛
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-4">Iogurte Caseiro e Natural</h3>
+                        <p class="text-gray-600 mb-8 flex-grow">
+                            Textura cremosa e sabor incomparável. Disponível em 6 sabores irresistíveis como morango,
+                            ameixa, abacaxi e coco, feitos com frutas de verdade e sem conservantes.
+                        </p>
+                        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20Iogurte%20Caseiro."
+                            target="_blank"
+                            class="block w-full text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors">
+                            Encomendar Iogurte
+                        </a>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-fundo rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                            🧀
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-4">Queijo Frescal Artesanal</h3>
+                        <p class="text-gray-600 mb-8 flex-grow">
+                            O clássico mineiro na sua versão mais pura. Leve, macio e produzido com leite selecionado, é
+                            o acompanhamento perfeito para o seu café da manhã ou lanche da tarde.
+                        </p>
+                        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20Queijo%20Frescal."
+                            target="_blank"
+                            class="block w-full text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors">
+                            Encomendar Queijo Frescal
+                        </a>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="bg-fundo rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div
+                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
+                            🧈
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-4">Queijo Mussarela de Alta Qualidade</h3>
+                        <p class="text-gray-600 mb-8 flex-grow">
+                            Derretimento perfeito e sabor suave. Nossa mussarela artesanal é ideal para receitas em
+                            família, garantindo qualidade superior para suas pizzas, sanduíches e pratos quentes.
+                        </p>
+                        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20Queijo%20Mussarela."
+                            target="_blank"
+                            class="block w-full text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors">
+                            Encomendar Mussarela
+                        </a>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center bg-primary/5 rounded-2xl p-8 border border-primary/10">
+                    <h4 class="text-lg font-medium text-texto mb-6">Quer montar um kit personalizado com nossos produtos
+                        da roça?</h4>
+                    <a href="https://wa.me/5533988659819" target="_blank"
+                        class="inline-flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold shadow-lg shadow-primary/20 hover:shadow-xl hover:-translate-y-1 transition-all">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Chamar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section><!-- 5. Benefícios -->
+        <section id="beneficios" class="py-24 bg-fundo overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Vantagens</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-texto mb-6">Por que escolher os Produtos
+                        da Roça?
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Item 1 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative group overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-3">Ingredientes Selecionados</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Usamos apenas leite de alta qualidade e frutas frescas para garantir um produto premium.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative group overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-3">Entrega no Mesmo Dia</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Para pedidos em Mantena, priorizamos a agilidade para que o produto chegue fresco à sua
+                            mesa.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative group overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-3">Saúde para sua Família</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Nossos produtos são livres de aditivos químicos, sendo uma opção segura para crianças e
+                            adultos.
+                        </p>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div
+                        class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 relative group overflow-hidden">
+                        <div
+                            class="absolute top-0 left-0 w-full h-1 bg-primary transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300">
+                        </div>
+                        <div
+                            class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-3">Sabor de Fazenda</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Resgatamos aquele gosto nostálgico do interior que os laticínios industriais perderam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Como Funciona -->
+        <section id="como-funciona" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Processo
+                        Simples</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-texto mb-6">Como receber nossos produtos
+                        em sua
+                        casa</h2>
+                </div>
+
+                <div class="relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-100 -translate-y-1/2 z-0">
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                        <!-- Passo 1 -->
+                        <div class="text-center relative">
+                            <div
+                                class="w-16 h-16 bg-white border-4 border-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold text-primary relative z-10 shadow-sm">
+                                1
+                            </div>
+                            <h3 class="text-lg font-bold text-texto mb-2">Escolha seus Sabores</h3>
+                            <p class="text-gray-600 text-sm px-4">
+                                Navegue pelos nossos produtos e escolha seus queijos e sabores de iogurte favoritos.
+                            </p>
+                        </div>
+
+                        <!-- Passo 2 -->
+                        <div class="text-center relative">
+                            <div
+                                class="w-16 h-16 bg-white border-4 border-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold text-primary relative z-10 shadow-sm">
+                                2
+                            </div>
+                            <h3 class="text-lg font-bold text-texto mb-2">Peça pelo WhatsApp</h3>
+                            <p class="text-gray-600 text-sm px-4">
+                                Clique nos botões do site para enviar seu pedido direto para nossa equipe de
+                                atendimento.
+                            </p>
+                        </div>
+
+                        <!-- Passo 3 -->
+                        <div class="text-center relative">
+                            <div
+                                class="w-16 h-16 bg-white border-4 border-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold text-primary relative z-10 shadow-sm">
+                                3
+                            </div>
+                            <h3 class="text-lg font-bold text-texto mb-2">Produção e Separação</h3>
+                            <p class="text-gray-600 text-sm px-4">
+                                Separamos seu pedido com cuidado, garantindo que tudo esteja devidamente refrigerado.
+                            </p>
+                        </div>
+
+                        <!-- Passo 4 -->
+                        <div class="text-center relative">
+                            <div
+                                class="w-16 h-16 bg-primary border-4 border-white rounded-full flex items-center justify-center mx-auto mb-6 text-xl font-bold text-white relative z-10 shadow-md">
+                                4
+                            </div>
+                            <h3 class="text-lg font-bold text-texto mb-2">Entrega em Mantena</h3>
+                            <p class="text-gray-600 text-sm px-4">
+                                Levamos a encomenda até seu endereço com rapidez e segurança.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Prova Social -->
+        <section id="depoimentos" class="py-24 bg-primary text-white relative overflow-hidden">
+            <!-- Background pattern -->
+            <div class="absolute inset-0 opacity-10"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span
+                        class="text-secondary font-semibold tracking-wider uppercase text-sm mb-4 block">Avaliações</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">O que dizem nossos clientes em
+                        Mantena
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Depoimento 1 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                        <div class="flex text-secondary mb-6">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-white/90 italic mb-6 leading-relaxed">"O melhor iogurte de morango que já provei
+                            na
+                            região. Dá para sentir os pedaços da fruta e não é excessivamente doce. Minha família
+                            adora!"</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
+                                CS</div>
+                            <span class="font-medium text-white">Cliente Satisfeito</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 2 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                        <div class="flex text-secondary mb-6">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-white/90 italic mb-6 leading-relaxed">"O queijo frescal é maravilhoso, super
+                            macio. Faço
+                            o pedido pelo WhatsApp e a entrega aqui em Mantena é sempre muito pontual."</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
+                                CS</div>
+                            <span class="font-medium text-white">Cliente Satisfeito</span>
+                        </div>
+                    </div>
+
+                    <!-- Depoimento 3 -->
+                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                        <div class="flex text-secondary mb-6">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                </path>
+                            </svg>
+                        </div>
+                        <p class="text-white/90 italic mb-6 leading-relaxed">"Sou cliente fiel. Os produtos são
+                            realmente
+                            artesanais e a qualidade da mussarela é diferenciada. Recomendo para todos!"</p>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
+                                CS</div>
+                            <span class="font-medium text-white">Cliente Satisfeito</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- 8. Bloco SEO Local / Área de Atuação -->
+        <section id="area-atuacao" class="py-24 bg-fundo overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Área de
+                            Atuação</span>
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-texto mb-6">Onde Comprar Queijo e
+                            Iogurte em
+                            Mantena - MG</h2>
+
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                            A Produtos da Roça atende toda a cidade de Mantena e região próxima, levando o melhor do
+                            laticínio
+                            artesanal mineiro para diversos bairros. Se você procura por produtos frescos direto do
+                            produtor,
+                            estamos prontos para te atender.
+                        </p>
+
+                        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-8 space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-texto">WhatsApp</h4>
+                                    <p class="text-gray-600">(33) 98865-9819</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-texto">Endereço</h4>
+                                    <p class="text-gray-600">[Rua, Número, Bairro], Mantena - MG</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                    <svg class="w-5 h-5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-texto">Horário</h4>
+                                    <p class="text-gray-600">Seg a Sáb: 08:00 – 17:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="h-[400px] w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                        <!-- PREENCHER COM IFRAME DO GOOGLE MAPS -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60257.49252939513!2d-40.9907!3d-18.7786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb5f6e6a4b8a8a7%3A0x9b2e3d4c5a6b7c8d!2sMantena%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1709000000000"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FAQ Estratégico -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span class="text-accent font-semibold tracking-wider uppercase text-sm mb-4 block">Dúvidas
+                        Frequentes</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-texto mb-6">Perguntas Frequentes sobre
+                        Nossos
+                        Laticínios</h2>
+                </div>
+
+                <div class="space-y-4" x-data="{ selected: null }">
+                    <!-- FAQ 1 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 1 ? selected = 1 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Onde comprar queijo frescal artesanal em Mantena MG?
+                            </h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 1}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 1" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Você pode comprar diretamente conosco através do nosso WhatsApp. Realizamos entregas em
+                                toda a
+                                cidade e região.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 2 ? selected = 2 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Vocês fazem entrega no mesmo dia em Mantena?</h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 2}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 2" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Sim, para pedidos realizados dentro do horário comercial, buscamos realizar a entrega no
+                                mesmo
+                                dia conforme disponibilidade de rota.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 3 ? selected = 3 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Quais são os sabores de iogurte caseiro disponíveis?
+                            </h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 3}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 3" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Atualmente oferecemos 6 sabores: morango, ameixa, abacaxi, coco e outras opções sazonais
+                                de
+                                frutas naturais.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 4 ? selected = 4 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Os produtos são 100% naturais?</h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 4}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 4" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Sim, nossos queijos e iogurtes são artesanais, produzidos sem conservantes ou aditivos
+                                químicos
+                                industriais.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 5 ? selected = 5 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Como faço para encomendar queijo mussarela?</h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 5}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 5" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Basta clicar em qualquer botão de WhatsApp neste site e informar a quantidade desejada.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 6 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 6 ? selected = 6 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Vocês atendem outras cidades além de Mantena?</h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 6}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 6" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Sim, atendemos Mantena e cidades vizinhas na região. Consulte-nos sobre a taxa de
+                                entrega para
+                                sua localidade.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 7 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 7 ? selected = 7 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Os queijos são produzidos diariamente?</h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 7}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 7" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Sim, trabalhamos com produção frequente para garantir que você receba sempre um produto
+                                novo e
+                                com validade preservada.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 8 -->
+                    <div class="border border-gray-100 rounded-2xl bg-fundo overflow-hidden">
+                        <button @click="selected !== 8 ? selected = 8 : selected = null"
+                            class="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none">
+                            <h3 class="font-bold text-texto pr-4">Quais as formas de pagamento aceitas?</h3>
+                            <svg class="w-5 h-5 text-primary transform transition-transform duration-200"
+                                :class="{'rotate-180': selected === 8}" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="selected === 8" x-collapse x-cloak>
+                            <div class="px-6 pb-5 text-gray-600">
+                                Aceitamos Pix, cartões de débito e crédito, e pagamento em dinheiro no ato da entrega.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- 10. CTA Final / Contato -->
+        <section id="contato" class="py-24 bg-primary relative overflow-hidden">
+            <div class="absolute inset-0 bg-black/10"></div>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">Leve o sabor da roça
+                    para
+                    sua mesa agora mesmo!</h2>
+
+                <p class="text-xl text-white/90 mb-10 leading-relaxed">
+                    Não deixe para depois. Garanta seus produtos artesanais frescos e sinta a diferença de um laticínio
+                    de
+                    verdade.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
+                    <a href="https://wa.me/5533988659819" target="_blank" rel="noopener"
+                        class="w-full sm:w-auto bg-accent hover:bg-accent/90 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 flex justify-center items-center gap-2">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
+                        Fazer Pedido no WhatsApp
+                    </a>
+                    <a href="tel:+5533988659819"
+                        class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all flex justify-center items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                            </path>
+                        </svg>
+                        Ligar agora
+                    </a>
+                </div>
+
+                <p class="text-white/70 text-sm flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    Respondemos rapidamente em horário comercial.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11. Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Branding -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#hero" class="flex items-center gap-3 mb-4">
+                        <img src="assets/img/logo.png" alt="Produtos da Roça"
+                            class="w-10 h-10 rounded-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all">
+                        <span class="font-serif font-bold text-lg text-white">Produtos da Roça</span>
+                    </a>
+                    <p class="text-sm text-gray-400">O melhor laticínio artesanal de Mantena e região.</p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Navegação</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#servicos" class="hover:text-white transition-colors">Produtos</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition-colors">Quem Somos</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">Dúvidas Frequentes</a></li>
+                        <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="md:col-span-2">
+                    <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Fale Conosco</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <a href="https://wa.me/5533988659819" class="hover:text-white transition-colors">(33)
+                                98865-9819</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+                                </path>
+                            </svg>
+                            <span>[Rua, Número, Bairro]<br>Mantena - MG</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span>Seg a Sáb: 08:00 – 17:00</span>
+                        </li>
+                    </ul>
+
+                    <!-- Social -->
+                    <div class="flex gap-4 mt-6">
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors"
+                            aria-label="Instagram">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.46 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors"
+                            aria-label="Facebook">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <p>&copy; 2026 Produtos da Roça. Todos os direitos reservados.</p>
+                <p>Desenvolvido por OFS Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5533988659819" target="_blank" rel="noopener"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-bounce group"
+        aria-label="Falar no WhatsApp">
+        <svg fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
             <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-          Peça pelo WhatsApp
-        </a>
-        <a href="#produtos" class="btn btn--outline btn--lg" id="hero-products-btn">Ver Produtos</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SOBRE ===================== -->
-  <section class="about" id="sobre">
-    <div class="container about__inner">
-      <div class="about__image animate-on-scroll">
-        <img src="assets/img/products.png"
-          alt="Iogurte caseiro e queijos artesanais frescal e mussarela da Produtos da Roça em Mantena MG"
-          loading="lazy" />
-      </div>
-      <div class="about__content animate-on-scroll">
-        <span class="section-label">Quem Somos</span>
-        <h2 class="section-title">Tradição mineira em cada produto</h2>
-        <p class="about__text">
-          A <strong>Produtos da Roça</strong> nasceu do amor pela tradição e pelo sabor autêntico da roça mineira.
-          Localizada em <strong>Mantena, Minas Gerais</strong>, produzimos iogurtes caseiros e queijos artesanais
-          com ingredientes selecionados e o cuidado que só quem faz com carinho consegue entregar.
-        </p>
-        <p class="about__text">
-          Cada produto que sai da nossa produção carrega a essência do campo: <em>natural, fresco e feito com
-            dedicação</em>.
-          Acreditamos que alimentação saudável e saborosa deve estar ao alcance de todas as famílias.
-        </p>
-        <div class="about__stats">
-          <div class="stat">
-            <span class="stat__number" data-count="6">0</span>
-            <span class="stat__label">Sabores de Iogurte</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number" data-count="2">0</span>
-            <span class="stat__label">Tipos de Queijo</span>
-          </div>
-          <div class="stat">
-            <span class="stat__number">100%</span>
-            <span class="stat__label">Natural e Caseiro</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PRODUTOS ===================== -->
-  <section class="products" id="produtos">
-    <div class="container">
-      <span class="section-label section-label--center">Nossos Produtos</span>
-      <h2 class="section-title section-title--center">Feitos com carinho, do campo à sua mesa</h2>
-
-      <div class="products__grid">
-        <!-- Iogurte -->
-        <div class="product-card animate-on-scroll" id="product-iogurte">
-          <div class="product-card__icon">🥛</div>
-          <h3 class="product-card__title">Iogurte Caseiro</h3>
-          <p class="product-card__desc">
-            Iogurte natural feito de forma artesanal com leite fresco. Cremoso, saudável e delicioso.
-          </p>
-          <div class="product-card__flavors">
-            <span class="flavor flavor--morango">🍓 Morango</span>
-            <span class="flavor flavor--ameixa">🫐 Ameixa</span>
-            <span class="flavor flavor--abacaxi">🍍 Abacaxi</span>
-            <span class="flavor flavor--coco">🥥 Coco</span>
-            <span class="flavor flavor--natural">🥛 Natural</span>
-            <span class="flavor flavor--outro">✨ Especial</span>
-          </div>
-          <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Quero%20encomendar%20iogurte%20caseiro!"
-            class="btn btn--primary btn--sm" target="_blank" rel="noopener">Encomendar</a>
-        </div>
-
-        <!-- Queijo Frescal -->
-        <div class="product-card animate-on-scroll" id="product-frescal">
-          <div class="product-card__icon">🧀</div>
-          <h3 class="product-card__title">Queijo Frescal</h3>
-          <p class="product-card__desc">
-            Queijo frescal artesanal, produzido com leite selecionado e o cuidado da tradição mineira. Leve e saboroso.
-          </p>
-          <div class="product-card__tags">
-            <span class="tag">Artesanal</span>
-            <span class="tag">Fresco</span>
-            <span class="tag">Leve</span>
-          </div>
-          <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Quero%20encomendar%20queijo%20frescal!"
-            class="btn btn--primary btn--sm" target="_blank" rel="noopener">Encomendar</a>
-        </div>
-
-        <!-- Queijo Mussarela -->
-        <div class="product-card animate-on-scroll" id="product-mussarela">
-          <div class="product-card__icon">🧈</div>
-          <h3 class="product-card__title">Queijo Mussarela</h3>
-          <p class="product-card__desc">
-            Mussarela artesanal de alta qualidade, perfeita para o dia a dia da sua família. Derrete na medida certa.
-          </p>
-          <div class="product-card__tags">
-            <span class="tag">Artesanal</span>
-            <span class="tag">Versátil</span>
-            <span class="tag">Premium</span>
-          </div>
-          <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Quero%20encomendar%20queijo%20mussarela!"
-            class="btn btn--primary btn--sm" target="_blank" rel="noopener">Encomendar</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DIFERENCIAIS ===================== -->
-  <section class="differentials" id="diferenciais">
-    <div class="container">
-      <span class="section-label section-label--center">Por Que Escolher a Gente?</span>
-      <h2 class="section-title section-title--center">O que nos torna especiais</h2>
-
-      <div class="differentials__grid">
-        <div class="diff-card animate-on-scroll">
-          <div class="diff-card__icon">🏡</div>
-          <h3 class="diff-card__title">100% Caseiro</h3>
-          <p class="diff-card__desc">Produtos feitos de forma artesanal, com o cuidado e o carinho de uma produção
-            caseira de verdade.</p>
-        </div>
-        <div class="diff-card animate-on-scroll">
-          <div class="diff-card__icon">🌿</div>
-          <h3 class="diff-card__title">Ingredientes Naturais</h3>
-          <p class="diff-card__desc">Sem conservantes artificiais. Apenas ingredientes selecionados e naturais para a
-            sua família.</p>
-        </div>
-        <div class="diff-card animate-on-scroll">
-          <div class="diff-card__icon">🚀</div>
-          <h3 class="diff-card__title">Entrega no Mesmo Dia</h3>
-          <p class="diff-card__desc">Frescor garantido! Faça seu pedido e receba no mesmo dia, direto da nossa produção.
-          </p>
-        </div>
-        <div class="diff-card animate-on-scroll">
-          <div class="diff-card__icon">⭐</div>
-          <h3 class="diff-card__title">Tradição Mineira</h3>
-          <p class="diff-card__desc">Receitas passadas de geração em geração, com todo o sabor autêntico de Minas
-            Gerais.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DEPOIMENTOS ===================== -->
-  <section class="testimonials" id="depoimentos">
-    <div class="container">
-      <span class="section-label section-label--center">O Que Dizem Nossos Clientes</span>
-      <h2 class="section-title section-title--center">Quem prova, aprova!</h2>
-
-      <div class="testimonials__grid">
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">"O iogurte de morango é simplesmente maravilhoso! Meus filhos adoram e eu
-            fico tranquila sabendo que é natural."</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">M</div>
-            <div>
-              <strong>Maria S.</strong>
-              <span>Cliente desde 2023</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">"Melhor queijo frescal que já comi! Dá pra sentir a diferença de um produto
-            feito com cuidado. Entrega super rápida!"</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">J</div>
-            <div>
-              <strong>João P.</strong>
-              <span>Cliente desde 2024</span>
-            </div>
-          </div>
-        </div>
-        <div class="testimonial-card animate-on-scroll">
-          <div class="testimonial-card__stars">⭐⭐⭐⭐⭐</div>
-          <p class="testimonial-card__text">"Desde que descobri os Produtos da Roça, não compro mais em outro lugar. A
-            mussarela é incrível e o atendimento é nota 10!"</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">A</div>
-            <div>
-              <strong>Ana L.</strong>
-              <span>Cliente desde 2023</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== CTA BANNER ===================== -->
-  <section class="cta-banner">
-    <div class="container cta-banner__inner">
-      <h2 class="cta-banner__title animate-on-scroll">Pronto para experimentar o melhor da roça?</h2>
-      <p class="cta-banner__text animate-on-scroll">Faça seu pedido agora pelo WhatsApp e receba em casa hoje mesmo!</p>
-      <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Quero%20fazer%20um%20pedido!"
-        class="btn btn--whatsapp btn--lg animate-on-scroll" target="_blank" rel="noopener" id="cta-whatsapp-btn">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-          <path
-            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
         </svg>
-        Falar no WhatsApp Agora
-      </a>
-    </div>
-  </section>
+    </a>
 
-  <!-- ===================== CONTATO ===================== -->
-  <section class="contact" id="contato">
-    <div class="container">
-      <span class="section-label section-label--center">Contato</span>
-      <h2 class="section-title section-title--center">Fale com a gente</h2>
-
-      <div class="contact__grid">
-        <div class="contact__info animate-on-scroll">
-          <div class="contact__card">
-            <div class="contact__card-icon">📍</div>
-            <h3>Localização</h3>
-            <p>Mantena - MG, Brasil</p>
-          </div>
-          <div class="contact__card">
-            <div class="contact__card-icon">🕐</div>
-            <h3>Horário</h3>
-            <p>Seg a Sáb: 08:00 – 17:00</p>
-          </div>
-          <div class="contact__card">
-            <div class="contact__card-icon">📱</div>
-            <h3>WhatsApp</h3>
-            <p><a href="https://wa.me/5533988659819" target="_blank" rel="noopener">(33) 98865-9819</a></p>
-          </div>
-        </div>
-        <div class="contact__map animate-on-scroll">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60257.49252939513!2d-40.9907!3d-18.7786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb5f6e6a4b8a8a7%3A0x9b2e3d4c5a6b7c8d!2sMantena%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1709000000000"
-            width="100%" height="350" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Localização Produtos da Roça em Mantena MG">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <img src="assets/img/logo.png" alt="Logo Produtos da Roça - Laticínio em Mantena MG" width="50" height="50"
-          class="footer__logo" />
-        <p class="footer__tagline">Sabor caseiro, direto da roça para sua mesa.</p>
-      </div>
-      <div class="footer__links">
-        <h3>Navegação</h3>
-        <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </div>
-      <div class="footer__contact">
-        <h3>Contato</h3>
-        <p>📱 <a href="https://wa.me/5533988659819">(33) 98865-9819</a></p>
-        <p>📍 Mantena - MG</p>
-        <p>🕐 Seg a Sáb: 08:00 – 17:00</p>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <div class="container">
-        <p>&copy; 2025 Produtos da Roça. Todos os direitos reservados.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ===================== WHATSAPP FLOAT ===================== -->
-  <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais!"
-    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" id="whatsapp-float-btn">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-      <path
-        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-    </svg>
-    <span class="whatsapp-float__tooltip">Fale conosco!</span>
-  </a>
-
-  <script src="script.js"></script>
+    <!-- JSON-LD LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Produtos da Roça",
+      "description": "Laticínio artesanal em Mantena MG. Iogurte caseiro e queijos artesanais.",
+      "image": "/assets/img/logo.png",
+      "telephone": "+5533988659819",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Mantena",
+        "addressRegion": "MG",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
 </body>
 
 </html>

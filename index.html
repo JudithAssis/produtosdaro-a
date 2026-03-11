@@ -183,7 +183,8 @@
     </style>
 </head>
 
-<body class="bg-fundo text-texto font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white">
+<body class="bg-fundo text-texto font-sans antialiased overflow-x-hidden selection:bg-primary selection:text-white"
+    x-data="cartApp()" x-init="init()">
 
     <!-- Header / Nav -->
     <header
@@ -194,7 +195,7 @@
                 <!-- Logo -->
                 <a href="#hero" class="flex items-center gap-3 group">
                     <img src="assets/img/logo.png" alt="Produtos da Roça"
-                        class="w-12 h-12 rounded-full shadow-sm group-hover:scale-105 transition-transform">
+                        class="w-16 h-16 rounded-full shadow-sm group-hover:scale-105 transition-transform">
                     <span class="font-serif font-bold text-xl text-primary tracking-tight hidden sm:block">Produtos da
                         Roça</span>
                 </a>
@@ -225,21 +226,50 @@
                         class="bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-full font-medium text-sm transition-all shadow-md shadow-primary/20 hover:shadow-lg hover:-translate-y-0.5 flex items-center gap-2">
                         WhatsApp
                     </a>
+
+                    <!-- Cart Button -->
+                    <button @click="$root.dispatchEvent(new CustomEvent('open-cart'))"
+                        class="relative p-2 text-texto hover:text-primary transition-colors"
+                        aria-label="Carrinho de compras" id="cart-btn-desktop">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-10H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                        <span x-show="cartCount > 0" x-text="cartCount"
+                            class="absolute -top-1 -right-1 bg-accent text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold leading-none"
+                            x-cloak></span>
+                    </button>
                 </nav>
 
-                <!-- Mobile menu button -->
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 text-texto focus:outline-none"
-                    aria-label="Menu">
-                    <svg class="w-6 h-6" x-show="!mobileMenuOpen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                    <svg class="w-6 h-6" x-show="mobileMenuOpen" x-cloak fill="none" stroke="currentColor"
-                        viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
+                <!-- Mobile: Cart + Menu buttons -->
+                <div class="flex items-center gap-1 md:hidden">
+                    <button @click="$root.dispatchEvent(new CustomEvent('open-cart'))"
+                        class="relative p-2 text-texto hover:text-primary transition-colors" aria-label="Carrinho">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-10H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                        <span x-show="cartCount > 0" x-text="cartCount"
+                            class="absolute -top-1 -right-1 bg-accent text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold leading-none"
+                            x-cloak></span>
+                    </button>
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" class="p-2 text-texto focus:outline-none"
+                        aria-label="Menu">
+                        <svg class="w-6 h-6" x-show="!mobileMenuOpen" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg class="w-6 h-6" x-show="mobileMenuOpen" x-cloak fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -441,62 +471,186 @@
                         qualidade que sua família merece.</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Card 1 -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     <div
-                        class="bg-fundo rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
-                        <div
-                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                            🥛
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Iogurte Integral Natural.jpeg" alt="Iogurte Integral Natural"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-4">Iogurte Caseiro e Natural</h3>
-                        <p class="text-gray-600 mb-8 flex-grow">
-                            Textura cremosa e sabor incomparável. Disponível em 6 sabores irresistíveis como morango,
-                            ameixa, abacaxi e coco, feitos com frutas de verdade e sem conservantes.
-                        </p>
-                        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20Iogurte%20Caseiro."
-                            target="_blank"
-                            class="block w-full text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors">
-                            Encomendar Iogurte
-                        </a>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Iogurte Integral Natural</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                        <button
+                            onclick="addToCart('Iogurte Integral Natural', 15.00, 'assets/img/Iogurte Integral Natural.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
                     </div>
-
-                    <!-- Card 2 -->
                     <div
-                        class="bg-fundo rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
-                        <div
-                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                            🧀
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor Ameixa.jpeg"
+                                alt="Iogurte com Pedaços de Ameixa"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-4">Queijo Frescal Artesanal</h3>
-                        <p class="text-gray-600 mb-8 flex-grow">
-                            O clássico mineiro na sua versão mais pura. Leve, macio e produzido com leite selecionado, é
-                            o acompanhamento perfeito para o seu café da manhã ou lanche da tarde.
-                        </p>
-                        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20Queijo%20Frescal."
-                            target="_blank"
-                            class="block w-full text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors">
-                            Encomendar Queijo Frescal
-                        </a>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Iogurte com Pedaços de Ameixa</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                        <button
+                            onclick="addToCart('Iogurte com Pedaços de Ameixa', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor Ameixa.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
                     </div>
-
-                    <!-- Card 3 -->
                     <div
-                        class="bg-fundo rounded-2xl p-8 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group">
-                        <div
-                            class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-                            🧈
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor Morango.jpeg"
+                                alt="Iogurte com Pedaços de Morango"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-4">Queijo Mussarela de Alta Qualidade</h3>
-                        <p class="text-gray-600 mb-8 flex-grow">
-                            Derretimento perfeito e sabor suave. Nossa mussarela artesanal é ideal para receitas em
-                            família, garantindo qualidade superior para suas pizzas, sanduíches e pratos quentes.
-                        </p>
-                        <a href="https://wa.me/5533988659819?text=Ol%C3%A1!%20Gostaria%20de%20encomendar%20Queijo%20Mussarela."
-                            target="_blank"
-                            class="block w-full text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors">
-                            Encomendar Mussarela
-                        </a>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Iogurte com Pedaços de Morango</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                        <button
+                            onclick="addToCart('Iogurte com Pedaços de Morango', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor Morango.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor abacaxi.jpeg"
+                                alt="Iogurte com Pedaços de Abacaxi"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Iogurte com Pedaços de Abacaxi</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                        <button
+                            onclick="addToCart('Iogurte com Pedaços de Abacaxi', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor abacaxi.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor coco.jpeg"
+                                alt="Iogurte com Pedaços de Coco"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Iogurte com Pedaços de Coco</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                        <button
+                            onclick="addToCart('Iogurte com Pedaços de Coco', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor coco.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor maracujá.jpeg"
+                                alt="Iogurte com Pedaços de Maracujá"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Iogurte com Pedaços de Maracujá</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                        <button
+                            onclick="addToCart('Iogurte com Pedaços de Maracujá', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor maracujá.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Queijo Minas frescal 500g.jpeg" alt="Minas Frescal 500g"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Minas Frescal 500g</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 25,00</p>
+                        <button
+                            onclick="addToCart('Minas Frescal 500g', 25.00, 'assets/img/Queijo Minas frescal 500g.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Queijo Minas 500g 30,00.jpeg" alt="Minas Padrão 500g"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Minas Padrão 500g</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
+                        <button
+                            onclick="addToCart('Minas Padrão 500g', 30.00, 'assets/img/Queijo Minas 500g 30,00.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Queijo coalho.jpeg" alt="Queijo Coalho 1kg"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Queijo Coalho 1kg</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 50,00</p>
+                        <button onclick="addToCart('Queijo Coalho 1kg', 50.00, 'assets/img/Queijo coalho.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Queijo minas temperado.jpeg" alt="Minas Padrão Temperado 500g"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Minas Padrão Temperado 500g</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 40,00</p>
+                        <button
+                            onclick="addToCart('Minas Padrão Temperado 500g', 40.00, 'assets/img/Queijo minas temperado.jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
+                    </div>
+                    <div
+                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                            <img src="assets/img/Queji minas frescal trufado .jpeg" alt="Minas Frescal Trufado 500g"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                            Minas Frescal Trufado 500g</h3>
+                        <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
+                        <button
+                            onclick="addToCart('Minas Frescal Trufado 500g', 30.00, 'assets/img/Queji minas frescal trufado .jpeg')"
+                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                            🛒 Colocar no Carrinho
+                        </button>
                     </div>
                 </div>
 
@@ -677,146 +831,7 @@
             </div>
         </section>
 
-        <!-- 7. Prova Social -->
-        <section id="depoimentos" class="py-24 bg-primary text-white relative overflow-hidden">
-            <!-- Background pattern -->
-            <div class="absolute inset-0 opacity-10"
-                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;">
-            </div>
-
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span
-                        class="text-secondary font-semibold tracking-wider uppercase text-sm mb-4 block">Avaliações</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">O que dizem nossos clientes em
-                        Mantena
-                    </h2>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Depoimento 1 -->
-                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
-                        <div class="flex text-secondary mb-6">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                        </div>
-                        <p class="text-white/90 italic mb-6 leading-relaxed">"O melhor iogurte de morango que já provei
-                            na
-                            região. Dá para sentir os pedaços da fruta e não é excessivamente doce. Minha família
-                            adora!"</p>
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
-                                CS</div>
-                            <span class="font-medium text-white">Cliente Satisfeito</span>
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 2 -->
-                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
-                        <div class="flex text-secondary mb-6">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                        </div>
-                        <p class="text-white/90 italic mb-6 leading-relaxed">"O queijo frescal é maravilhoso, super
-                            macio. Faço
-                            o pedido pelo WhatsApp e a entrega aqui em Mantena é sempre muito pontual."</p>
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
-                                CS</div>
-                            <span class="font-medium text-white">Cliente Satisfeito</span>
-                        </div>
-                    </div>
-
-                    <!-- Depoimento 3 -->
-                    <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
-                        <div class="flex text-secondary mb-6">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
-                                </path>
-                            </svg>
-                        </div>
-                        <p class="text-white/90 italic mb-6 leading-relaxed">"Sou cliente fiel. Os produtos são
-                            realmente
-                            artesanais e a qualidade da mussarela é diferenciada. Recomendo para todos!"</p>
-                        <div class="flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center font-bold text-white">
-                                CS</div>
-                            <span class="font-medium text-white">Cliente Satisfeito</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- 8. Bloco SEO Local / Área de Atuação -->
+        <!-- 8. Bloco SEO Local / Área de Atuação -->
         <section id="area-atuacao" class="py-24 bg-fundo overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
@@ -1210,6 +1225,94 @@
         </div>
     </footer>
 
+    <!-- ==================== CARRINHO DE COMPRAS ==================== -->
+    <!-- Overlay escuro -->
+    <div id="cart-overlay"
+        class="fixed inset-0 bg-black/50 z-[60] transition-opacity duration-300 opacity-0 pointer-events-none"
+        onclick="closeCart()">
+    </div>
+
+    <!-- Painel do Carrinho -->
+    <div id="cart-drawer"
+        class="fixed top-0 right-0 h-full w-full max-w-md bg-white z-[70] shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+
+        <!-- Cabeçalho do Carrinho -->
+        <div class="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-fundo">
+            <div class="flex items-center gap-3">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 3h2l.4 2M7 13h10l4-10H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+                <h2 class="text-xl font-bold text-texto font-serif">Meu Carrinho</h2>
+                <span id="cart-header-count"
+                    class="bg-accent text-white text-xs px-2 py-0.5 rounded-full font-bold">0</span>
+            </div>
+            <button onclick="closeCart()" class="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="Fechar carrinho">
+                <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Lista de Itens -->
+        <div id="cart-items-list" class="flex-1 overflow-y-auto px-6 py-4 space-y-4">
+            <!-- Itens adicionados por JavaScript -->
+        </div>
+
+        <!-- Estado Vazio -->
+        <div id="cart-empty" class="flex-1 flex flex-col items-center justify-center text-center px-6 py-12">
+            <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mb-4">
+                <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M3 3h2l.4 2M7 13h10l4-10H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                    </path>
+                </svg>
+            </div>
+            <h3 class="text-lg font-bold text-texto mb-2">Carrinho vazio</h3>
+            <p class="text-gray-500 text-sm mb-6">Adicione produtos para continuar com seu pedido.</p>
+            <button onclick="closeCart()"
+                class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-full font-medium text-sm transition-colors">
+                Ver Produtos
+            </button>
+        </div>
+
+        <!-- Rodapé do Carrinho -->
+        <div id="cart-footer" class="border-t border-gray-100 px-6 py-5 bg-fundo hidden">
+            <!-- Subtotal -->
+            <div class="flex justify-between items-center mb-1 text-sm text-gray-500">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">R$ 0,00</span>
+            </div>
+            <div class="flex justify-between items-center mb-5">
+                <span class="font-bold text-lg text-texto">Total</span>
+                <span id="cart-total" class="font-bold text-2xl text-primary">R$ 0,00</span>
+            </div>
+
+            <!-- Botão Finalizar -->
+            <a id="cart-whatsapp-link" href="#" target="_blank" rel="noopener"
+                class="flex items-center justify-center gap-3 w-full bg-[#25D366] hover:bg-[#128C7E] text-white py-4 rounded-2xl font-bold text-lg transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 mb-3">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                Finalizar Pedido pelo WhatsApp
+            </a>
+            <p class="text-center text-xs text-gray-400">Você será redirecionado ao WhatsApp com seu pedido pronto.</p>
+        </div>
+    </div>
+
+    <!-- Toast de confirmação -->
+    <div id="cart-toast"
+        class="fixed bottom-24 left-1/2 -translate-x-1/2 z-[80] bg-primary text-white px-5 py-3 rounded-full shadow-lg text-sm font-medium flex items-center gap-2 transition-all duration-300 opacity-0 translate-y-4 pointer-events-none">
+        <svg class="w-4 h-4 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+        <span id="cart-toast-msg">Produto adicionado!</span>
+    </div>
+
     <!-- Botão WhatsApp Flutuante -->
     <a href="https://wa.me/5533988659819" target="_blank" rel="noopener"
         class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 animate-bounce group"
@@ -1243,6 +1346,161 @@
       }
     }
     </script>
+
+    <!-- ==================== CARRINHO DE COMPRAS - JAVASCRIPT ==================== -->
+    <script>
+        // Estado global do carrinho
+        let cart = JSON.parse(localStorage.getItem('carrinho_pdr') || '[]');
+
+        function cartApp() {
+            return {
+                cartCount: 0,
+                init() {
+                    this.cartCount = cart.reduce((s, i) => s + i.qty, 0);
+                    window.addEventListener('open-cart', () => openCart());
+                    window.addEventListener('cart-updated', (e) => {
+                        this.cartCount = e.detail.count;
+                    });
+                }
+            };
+        }
+
+        function saveCart() {
+            localStorage.setItem('carrinho_pdr', JSON.stringify(cart));
+            const count = cart.reduce((s, i) => s + i.qty, 0);
+            window.dispatchEvent(new CustomEvent('cart-updated', { detail: { count } }));
+            renderCart();
+        }
+
+        function addToCart(name, price, img) {
+            const existing = cart.find(i => i.name === name);
+            if (existing) {
+                existing.qty++;
+            } else {
+                cart.push({ name, price, img, qty: 1 });
+            }
+            saveCart();
+            openCart();
+            showToast('"' + name + '" adicionado ao carrinho!');
+        }
+
+        function removeFromCart(name) {
+            cart = cart.filter(i => i.name !== name);
+            saveCart();
+        }
+
+        function changeQty(name, delta) {
+            const item = cart.find(i => i.name === name);
+            if (!item) return;
+            item.qty += delta;
+            if (item.qty <= 0) {
+                cart = cart.filter(i => i.name !== name);
+            }
+            saveCart();
+        }
+
+        function openCart() {
+            document.getElementById('cart-overlay').classList.remove('opacity-0', 'pointer-events-none');
+            document.getElementById('cart-overlay').classList.add('opacity-100');
+            document.getElementById('cart-drawer').classList.remove('translate-x-full');
+            document.getElementById('cart-drawer').classList.add('translate-x-0');
+            document.body.style.overflow = 'hidden';
+            renderCart();
+        }
+
+        function closeCart() {
+            document.getElementById('cart-overlay').classList.add('opacity-0', 'pointer-events-none');
+            document.getElementById('cart-overlay').classList.remove('opacity-100');
+            document.getElementById('cart-drawer').classList.add('translate-x-full');
+            document.getElementById('cart-drawer').classList.remove('translate-x-0');
+            document.body.style.overflow = '';
+        }
+
+        function renderCart() {
+            const list = document.getElementById('cart-items-list');
+            const empty = document.getElementById('cart-empty');
+            const footer = document.getElementById('cart-footer');
+            const headerCount = document.getElementById('cart-header-count');
+
+            list.innerHTML = '';
+
+            if (cart.length === 0) {
+                list.classList.add('hidden');
+                empty.classList.remove('hidden');
+                empty.classList.add('flex');
+                footer.classList.add('hidden');
+                headerCount.textContent = '0';
+                return;
+            }
+
+            list.classList.remove('hidden');
+            empty.classList.add('hidden');
+            empty.classList.remove('flex');
+            footer.classList.remove('hidden');
+
+            let total = 0;
+            let count = 0;
+            let msgLines = ['Olá! Gostaria de fazer o seguinte pedido:%0A'];
+
+            cart.forEach((item, idx) => {
+                total += item.price * item.qty;
+                count += item.qty;
+
+                const safeName = item.name.replace(/'/g, "\\'");
+                const safeImg = (item.img || '').replace(/'/g, "\\'");
+
+                const el = document.createElement('div');
+                el.className = 'flex items-center gap-4 bg-fundo rounded-2xl p-3 border border-gray-100';
+                el.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover shrink-0">
+                    <div class="flex-1 min-w-0">
+                        <p class="font-semibold text-texto text-sm leading-tight mb-1 truncate">${item.name}</p>
+                        <p class="text-primary font-bold text-sm">R$ ${item.price.toFixed(2).replace('.', ',')}</p>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="changeQty('${safeName}', -1)" class="w-7 h-7 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center text-texto font-bold text-sm transition-colors">−</button>
+                        <span class="text-sm font-bold w-4 text-center">${item.qty}</span>
+                        <button onclick="changeQty('${safeName}', 1)" class="w-7 h-7 rounded-full bg-primary/10 hover:bg-primary/20 flex items-center justify-center text-primary font-bold text-sm transition-colors">+</button>
+                        <button onclick="removeFromCart('${safeName}')" class="w-7 h-7 rounded-full bg-red-50 hover:bg-red-100 flex items-center justify-center text-red-400 hover:text-red-600 transition-colors ml-1" aria-label="Remover">
+                            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                        </button>
+                    </div>
+                `;
+                list.appendChild(el);
+
+                msgLines.push(`• ${item.qty}x ${item.name} - R$ ${(item.price * item.qty).toFixed(2).replace('.', ',')}`);
+            });
+
+            const totalFormatted = total.toFixed(2).replace('.', ',');
+            msgLines.push('%0A*Total: R$ ' + totalFormatted + '*');
+
+            document.getElementById('cart-subtotal').textContent = 'R$ ' + totalFormatted;
+            document.getElementById('cart-total').textContent = 'R$ ' + totalFormatted;
+            headerCount.textContent = count;
+
+            const waMsg = encodeURIComponent(msgLines.join('%0A').replace(/%250A/g, '%0A'));
+            const waText = msgLines.map(l => l.replace(/%0A/g, '\n')).join('\n');
+            const waUrl = 'https://wa.me/5533988659819?text=' + encodeURIComponent(waText);
+            document.getElementById('cart-whatsapp-link').href = waUrl;
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('cart-toast');
+            document.getElementById('cart-toast-msg').textContent = msg;
+            toast.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }, 3000);
+        }
+
+        // Inicializar na carga
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCart();
+        });
+    </script>
+
 </body>
 
 </html>

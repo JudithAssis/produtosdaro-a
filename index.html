@@ -65,6 +65,7 @@
           "telephone": "+5533988659819",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "R. Prefeito Anastácio, n° 81 - Centro",
             "addressLocality": "Mantena",
             "addressRegion": "MG",
             "addressCountry": "BR"
@@ -404,7 +405,7 @@
                 <div class="grid lg:grid-cols-2 gap-16 items-center">
                     <div class="relative">
                         <div class="absolute -inset-4 bg-secondary/20 rounded-[2rem] transform -rotate-3"></div>
-                        <img src="assets/img/products.png" alt="Produção Caseira"
+                        <img src="assets/img/Imagem quem somos.jpeg" alt="Produção Caseira"
                             class="relative rounded-2xl shadow-2xl object-cover aspect-square" loading="lazy">
 
                         <div
@@ -432,16 +433,22 @@
 
                         <div class="space-y-6 text-gray-600 text-lg leading-relaxed mb-8">
                             <p>
-                                A Produtos da Roça nasceu do desejo de resgatar a essência da culinária mineira, levando
-                                para a mesa das famílias de Mantena um laticínio artesanal de pureza incomparável. O que
-                                começou como uma tradição familiar, hoje é referência para quem não abre mão de saúde e
-                                sabor.
+                                O Produtos da Roça nasceu do amor pelo que é simples, natural e feito com dedicação. Na Fazenda Boa Sorte, localizada no Córrego da Paixão, em Mantena, cada queijo e cada iogurte são produzidos de forma artesanal, sem conservantes, respeitando o tempo da natureza e preservando o verdadeiro sabor da roça.
                             </p>
                             <p>
-                                Nosso diferencial está no respeito ao tempo da natureza e na seleção rigorosa da nossa
-                                matéria-prima. Cada queijo e iogurte que sai da nossa produção carrega a identidade de
-                                Minas Gerais e o compromisso com um alimento vivo, nutritivo e livre de processos
-                                industriais agressivos.
+                                À frente dessa tradição está João Antônio de Assis, que há mais de 40 anos dedica sua vida à arte de produzir queijos artesanais. Sua experiência, construída ao longo de décadas, se reflete em receitas cuidadosas, feitas com paciência, conhecimento e paixão pelo que faz.
+                            </p>
+                            <p>
+                                Ao seu lado está seu filho, João Vitor de Assis, que participa ativamente da produção e ajuda a manter viva essa tradição familiar, dando continuidade a um trabalho construído com história, dedicação e orgulho.
+                            </p>
+                            <p>
+                                Os iogurtes são preparados com frutas selecionadas uma a uma, garantindo frescor, qualidade e um sabor especial em cada pote. Todo o processo é feito com atenção aos detalhes, preservando a simplicidade e a autenticidade dos produtos naturais.
+                            </p>
+                            <p>
+                                Para que tudo chegue até os clientes com o mesmo cuidado com que é produzido, Lucas Dutra de Assis é responsável por movimentar o comércio e realizar as entregas, garantindo que cada produto chegue com qualidade, atenção e carinho.
+                            </p>
+                            <p>
+                                No Produtos da Roça, cada queijo e cada iogurte carregam mais do que sabor. Carregam história, tradição e o compromisso de levar à mesa das pessoas o verdadeiro gosto da roça.
                             </p>
                         </div>
 
@@ -877,7 +884,7 @@
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-texto">Endereço</h4>
-                                    <p class="text-gray-600">[Rua, Número, Bairro], Mantena - MG</p>
+                                    <p class="text-gray-600">R. Prefeito Anastácio, n° 81 - Centro, Mantena - MG</p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -1135,33 +1142,37 @@
     <!-- 11. Footer -->
     <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left justify-items-center md:justify-items-start mb-8">
                 <!-- Branding -->
-                <div class="col-span-1 md:col-span-1">
-                    <a href="#hero" class="flex items-center gap-3 mb-4">
-                        <img src="assets/img/logo.png" alt="Produtos da Roça"
-                            class="w-10 h-10 rounded-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all">
-                        <span class="font-serif font-bold text-lg text-white">Produtos da Roça</span>
+                <div class="flex flex-col items-center md:items-start max-w-xs">
+                    <a href="#hero" class="flex items-center gap-3 mb-4 group inline-flex">
+                        <div class="p-1 bg-white/10 rounded-full group-hover:bg-white/20 transition-colors">
+                            <img src="assets/img/logo.png" alt="Produtos da Roça"
+                                class="w-14 h-14 rounded-full object-cover">
+                        </div>
+                        <span class="font-serif font-bold text-xl text-white">Produtos da Roça</span>
                     </a>
                     <p class="text-sm text-gray-400">O melhor laticínio artesanal de Mantena e região.</p>
                 </div>
 
                 <!-- Links -->
-                <div>
+                <div class="flex flex-col items-center md:items-start">
                     <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Navegação</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#servicos" class="hover:text-white transition-colors">Produtos</a></li>
+                    <ul class="space-y-2 text-sm flex flex-col items-center md:items-start">
+                        <li><a href="#hero" class="hover:text-white transition-colors">Início</a></li>
                         <li><a href="#sobre" class="hover:text-white transition-colors">Quem Somos</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition-colors">Produtos</a></li>
+                        <li><a href="#beneficios" class="hover:text-white transition-colors">Benefícios</a></li>
                         <li><a href="#faq" class="hover:text-white transition-colors">Dúvidas Frequentes</a></li>
                         <li><a href="#contato" class="hover:text-white transition-colors">Contato</a></li>
                     </ul>
                 </div>
 
                 <!-- Contato -->
-                <div class="md:col-span-2">
+                <div class="flex flex-col items-center md:items-start">
                     <h4 class="text-white font-bold mb-4 uppercase tracking-wider text-sm">Fale Conosco</h4>
-                    <ul class="space-y-3 text-sm">
-                        <li class="flex items-start gap-3">
+                    <ul class="space-y-3 text-sm flex flex-col items-center md:items-start">
+                        <li class="flex items-start text-left gap-3">
                             <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1171,7 +1182,7 @@
                             <a href="https://wa.me/5533988659819" class="hover:text-white transition-colors">(33)
                                 98865-9819</a>
                         </li>
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start text-left gap-3">
                             <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1181,20 +1192,23 @@
                                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
                                 </path>
                             </svg>
-                            <span>[Rua, Número, Bairro]<br>Mantena - MG</span>
+                            <span>R. Prefeito Anastácio, n° 81 - Centro<br>Mantena - MG</span>
                         </li>
-                        <li class="flex items-start gap-3">
+                        <li class="flex items-start text-left gap-3">
                             <svg class="w-5 h-5 text-gray-500 shrink-0 mt-0.5" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
-                            <span>Seg a Sáb: 08:00 – 17:00</span>
+                            <div class="flex flex-col">
+                                <span>Seg. a Sáb: 08:00 – 19:00</span>
+                                <span class="text-xs text-gray-400 mt-1">Domingo fechado</span>
+                            </div>
                         </li>
                     </ul>
 
                     <!-- Social -->
-                    <div class="flex gap-4 mt-6">
+                    <div class="flex justify-center md:justify-start gap-4 mt-6">
                         <a href="#"
                             class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 hover:text-white transition-colors"
                             aria-label="Instagram">
@@ -1334,6 +1348,7 @@
       "telephone": "+5533988659819",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "R. Prefeito Anastácio, n° 81 - Centro",
         "addressLocality": "Mantena",
         "addressRegion": "MG",
         "addressCountry": "BR"

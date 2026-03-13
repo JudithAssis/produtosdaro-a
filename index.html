@@ -462,186 +462,308 @@
                         qualidade que sua família merece.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Iogurte Integral Natural.jpeg" alt="Iogurte Integral Natural"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                <!-- ═══════════════════════════════════════════ -->
+                <!-- 🥛 IOGURTES                                -->
+                <!-- ═══════════════════════════════════════════ -->
+                <div class="mb-20">
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-3xl shrink-0">🥛</div>
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-serif font-bold text-texto">Iogurtes Artesanais</h3>
+                            <p class="text-gray-500 text-sm mt-1">Feitos com frutas frescas selecionadas — 6 sabores irresistíveis</p>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Iogurte Integral Natural</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
-                        <button
-                            onclick="addToCart('Iogurte Integral Natural', 15.00, 'assets/img/Iogurte Integral Natural.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
+                        <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-primary/20 to-transparent ml-4"></div>
                     </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor Ameixa.jpeg"
-                                alt="Iogurte com Pedaços de Ameixa"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+
+                    <!-- Banner dos 6 sabores -->
+                    <div class="mb-10 rounded-2xl overflow-hidden shadow-lg relative">
+                        <img src="assets/img/Iogurte Integral todos os sabores.jpeg"
+                            alt="Iogurte Integral - Todos os 6 sabores disponíveis"
+                            class="w-full h-48 md:h-64 object-cover" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end">
+                            <div class="p-6 md:p-8">
+                                <p class="text-white font-serif text-xl md:text-2xl font-bold">Todos os 6 sabores disponíveis!</p>
+                                <p class="text-white/80 text-sm mt-1">Natural, Ameixa, Morango, Abacaxi, Coco e Maracujá</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Iogurte com Pedaços de Ameixa</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
-                        <button
-                            onclick="addToCart('Iogurte com Pedaços de Ameixa', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor Ameixa.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
                     </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor Morango.jpeg"
-                                alt="Iogurte com Pedaços de Morango"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                        <!-- Iogurte Natural -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Iogurte Integral Natural.jpeg" alt="Iogurte Integral Natural"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Iogurte Integral Natural</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                            <button
+                                onclick="addToCart('Iogurte Integral Natural', 15.00, 'assets/img/Iogurte Integral Natural.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Iogurte com Pedaços de Morango</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
-                        <button
-                            onclick="addToCart('Iogurte com Pedaços de Morango', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor Morango.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
+                        <!-- Iogurte Ameixa -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor Ameixa.jpeg"
+                                    alt="Iogurte Integral com Pedaços de Ameixa"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Iogurte com Pedaços de Ameixa</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                            <button
+                                onclick="addToCart('Iogurte com Pedaços de Ameixa', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor Ameixa.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
+                        <!-- Iogurte Morango -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor Morango.jpeg"
+                                    alt="Iogurte Integral com Pedaços de Morango"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Iogurte com Pedaços de Morango</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                            <button
+                                onclick="addToCart('Iogurte com Pedaços de Morango', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor Morango.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
+                        <!-- Iogurte Abacaxi -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor abacaxi.jpeg"
+                                    alt="Iogurte Integral com Pedaços de Abacaxi"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Iogurte com Pedaços de Abacaxi</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                            <button
+                                onclick="addToCart('Iogurte com Pedaços de Abacaxi', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor abacaxi.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
+                        <!-- Iogurte Coco -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor coco.jpeg"
+                                    alt="Iogurte Integral com Pedaços de Coco"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Iogurte com Pedaços de Coco</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                            <button
+                                onclick="addToCart('Iogurte com Pedaços de Coco', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor coco.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
+                        <!-- Iogurte Maracujá -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor maracujá.jpeg"
+                                    alt="Iogurte Integral com Pedaços de Maracujá"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Iogurte com Pedaços de Maracujá</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
+                            <button
+                                onclick="addToCart('Iogurte com Pedaços de Maracujá', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor maracujá.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
                     </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor abacaxi.jpeg"
-                                alt="Iogurte com Pedaços de Abacaxi"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                </div>
+
+                <!-- ═══════════════════════════════════════════ -->
+                <!-- 🧀 QUEIJOS                                 -->
+                <!-- ═══════════════════════════════════════════ -->
+                <div>
+                    <div class="flex items-center gap-4 mb-10">
+                        <div class="w-12 h-12 bg-secondary/20 rounded-xl flex items-center justify-center text-3xl shrink-0">🧀</div>
+                        <div>
+                            <h3 class="text-2xl md:text-3xl font-serif font-bold text-texto">Queijos Artesanais</h3>
+                            <p class="text-gray-500 text-sm mt-1">Tradição mineira em cada fatia — frescal, padrão, coalho, temperado e trufado</p>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Iogurte com Pedaços de Abacaxi</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
-                        <button
-                            onclick="addToCart('Iogurte com Pedaços de Abacaxi', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor abacaxi.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
+                        <div class="hidden md:block flex-1 h-px bg-gradient-to-r from-secondary/30 to-transparent ml-4"></div>
                     </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor coco.jpeg"
-                                alt="Iogurte com Pedaços de Coco"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        <!-- Queijo Minas Frescal 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo Minas frescal 500g.jpeg" alt="Queijo Minas Frescal 500g"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Queijo Minas Frescal 500g</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 25,00</p>
+                            <button
+                                onclick="addToCart('Queijo Minas Frescal 500g', 25.00, 'assets/img/Queijo Minas frescal 500g.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Iogurte com Pedaços de Coco</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
-                        <button
-                            onclick="addToCart('Iogurte com Pedaços de Coco', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor coco.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
-                    </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Iogurte Integral com Pedaços de fruta sabor maracujá.jpeg"
-                                alt="Iogurte com Pedaços de Maracujá"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                        <!-- Queijo Minas Padrão 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo Minas 500g 30,00.jpeg" alt="Queijo Minas Padrão 500g"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Queijo Minas Padrão 500g</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
+                            <button
+                                onclick="addToCart('Queijo Minas Padrão 500g', 30.00, 'assets/img/Queijo Minas 500g 30,00.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Iogurte com Pedaços de Maracujá</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 15,00</p>
-                        <button
-                            onclick="addToCart('Iogurte com Pedaços de Maracujá', 15.00, 'assets/img/Iogurte Integral com Pedaços de fruta sabor maracujá.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
-                    </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Queijo Minas frescal 500g.jpeg" alt="Minas Frescal 500g"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                        <!-- Queijo Minas Frescal Temperado 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo minas frescal temperado.jpeg" alt="Queijo Minas Frescal Temperado"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Queijo Minas Frescal Temperado</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">Consulte</p>
+                            <a href="https://wa.me/5533988659819?text=Olá! Gostaria de saber o preço do Queijo Minas Frescal Temperado." target="_blank"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                💬 Consultar Preço
+                            </a>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Minas Frescal 500g</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 25,00</p>
-                        <button
-                            onclick="addToCart('Minas Frescal 500g', 25.00, 'assets/img/Queijo Minas frescal 500g.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
-                    </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Queijo Minas 500g 30,00.jpeg" alt="Minas Padrão 500g"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                        <!-- Queijo Minas Padrão Temperado 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo minas temperado.jpeg" alt="Queijo Minas Padrão Temperado 500g"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Queijo Minas Padrão Temperado 500g</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 40,00</p>
+                            <button
+                                onclick="addToCart('Queijo Minas Padrão Temperado 500g', 40.00, 'assets/img/Queijo minas temperado.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Minas Padrão 500g</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
-                        <button
-                            onclick="addToCart('Minas Padrão 500g', 30.00, 'assets/img/Queijo Minas 500g 30,00.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
-                    </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Queijo coalho.jpeg" alt="Queijo Coalho 1kg"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                        <!-- Queijo Coalho 1kg -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo coalho.jpeg" alt="Queijo Coalho 1kg"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Queijo Coalho 1kg</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 50,00</p>
+                            <button onclick="addToCart('Queijo Coalho 1kg', 50.00, 'assets/img/Queijo coalho.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Queijo Coalho 1kg</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 50,00</p>
-                        <button onclick="addToCart('Queijo Coalho 1kg', 50.00, 'assets/img/Queijo coalho.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
-                    </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Queijo minas temperado.jpeg" alt="Minas Padrão Temperado 500g"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                        <!-- Queijo Minas Frescal Trufado Doce de Leite 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo minas frescal trufado doce de leite 500g.jpeg" alt="Queijo Minas Frescal Trufado Doce de Leite 500g"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Minas Frescal Trufado Doce de Leite 500g</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
+                            <button
+                                onclick="addToCart('Minas Frescal Trufado Doce de Leite 500g', 30.00, 'assets/img/Queijo minas frescal trufado doce de leite 500g.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Minas Padrão Temperado 500g</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 40,00</p>
-                        <button
-                            onclick="addToCart('Minas Padrão Temperado 500g', 40.00, 'assets/img/Queijo minas temperado.jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
-                    </div>
-                    <div
-                        class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
-                        <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
-                            <img src="assets/img/Queji minas frescal trufado .jpeg" alt="Minas Frescal Trufado 500g"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                loading="lazy">
+                        <!-- Queijo Minas Frescal Trufado Goiabada 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo minas frescal trufado goiabada 500g.png" alt="Queijo Minas Frescal Trufado Goiabada 500g"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Minas Frescal Trufado Goiabada 500g</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
+                            <button
+                                onclick="addToCart('Minas Frescal Trufado Goiabada 500g', 30.00, 'assets/img/Queijo minas frescal trufado goiabada 500g.png')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
                         </div>
-                        <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
-                            Minas Frescal Trufado 500g</h3>
-                        <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
-                        <button
-                            onclick="addToCart('Minas Frescal Trufado 500g', 30.00, 'assets/img/Queji minas frescal trufado .jpeg')"
-                            class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
-                            🛒 Colocar no Carrinho
-                        </button>
+                        <!-- Queijo Minas Trufado Goiabada 1kg -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Queijo minas trufado goiabada 1kg.jpeg" alt="Queijo Minas Trufado Goiabada 1kg"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Queijo Minas Trufado Goiabada 1kg</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 60,00</p>
+                            <button
+                                onclick="addToCart('Queijo Minas Trufado Goiabada 1kg', 60.00, 'assets/img/Queijo minas trufado goiabada 1kg.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
+                        <!-- Requeijão 500g -->
+                        <div
+                            class="bg-fundo rounded-2xl p-6 border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all group flex flex-col items-center text-center">
+                            <div class="w-full h-56 rounded-xl overflow-hidden mb-6 relative">
+                                <img src="assets/img/Requeijao 500g.jpeg" alt="Requeijão 500g"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                    loading="lazy">
+                            </div>
+                            <h3 class="text-xl font-bold text-texto mb-2 min-h-[56px] flex items-center justify-center">
+                                Requeijão 500g</h3>
+                            <p class="text-2xl font-bold text-primary mb-6">R$ 30,00</p>
+                            <button
+                                onclick="addToCart('Requeijão 500g', 30.00, 'assets/img/Requeijao 500g.jpeg')"
+                                class="block w-full mt-auto text-center bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-full font-medium transition-colors cursor-pointer">
+                                🛒 Colocar no Carrinho
+                            </button>
+                        </div>
                     </div>
                 </div>
 
